@@ -1,38 +1,112 @@
-.App {
+.error {
+  color: #ff1e00;
+}
+.is-valid
+.steps > li.is-active:before, 
+.steps > li.is-active ~ li:before {
+  content: counter(stepNum);
+  font-family: inherit;
+  font-weight: 700;
+}
+.steps > li.is-active:after, 
+.steps > li.is-active ~ li:after {
+  background-color: #ededed;
+}
+
+.steps {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.steps > li {
+  counter-increment: stepNum;
   text-align: center;
+  display: table-cell;
+  position: relative;
+  color: #ffffff;
+}
+.steps > li:before {
+  content: '\f00c';
+  content: '\2713;';
+  content: '\10003';
+  content: '\10004';
+  content: '\2713';
+  display: block;
+  margin: 0 auto 4px;
+  background-color: #fff;
+  width: 36px;
+  height: 36px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: bold;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(122, 119, 118);
+  border-radius: 50%;
+}
+.steps > li:after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: rgb(122, 119, 118);;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  z-index: -1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.steps > li.completed:before {
+  background-color: green;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.steps > li:last-child:after {
+  display: none;
+}
+.steps > li.is-active:before {
+  background-color: #226fff;
+  border-color: #ffffff;
+}
+.steps > li.is-active ~ li {
+  color: #808080;
+}
+.steps > li.is-active ~ li:before {
+  background-color: #ededed;
+  border-color: #ededed;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 10004;
 }
-
-.App-link {
-  color: #61dafb;
+.loader-circle-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  margin: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
+.loader-circle {
+  border: 4px solid #ffffff;
+  border-top: 4px solid #899091;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }

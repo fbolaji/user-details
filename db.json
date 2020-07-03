@@ -1,0 +1,673 @@
+{
+  "formConfigData": {
+    "userForm": [
+      {
+        "label": "name",
+        "id": "name",
+        "name": "name",
+        "type": "text",
+        "placeholder": "Please enter your name",
+        "isRequired": true,
+        "validator": {
+          "isRequired": true,
+          "error": "Name is required."
+        }
+      },
+      {
+        "label": "Role",
+        "id": "role",
+        "name": "role",
+        "type": "text",
+        "placeholder": "Please enter role",
+        "isRequired": false,
+        "pattern": ""
+      },
+      {
+        "label": "Email",
+        "id": "emailAddress",
+        "name": "emailAddress",
+        "type": "text",
+        "placeholder": "Please enter email address",
+        "isRequired": true,
+        "pattern": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[A-Za-z]+$",
+        "validator": {
+          "isRequired": true,
+          "regex": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[A-Za-z]+$",
+          "error": "A valid email address is required."
+        }
+      },
+      {
+        "label": "Password",
+        "id": "password",
+        "name": "password",
+        "type": "password",
+        "placeholder": "Please enter password",
+        "isRequired": true,
+        "pattern": "/(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{9,}/",
+        "validator": {
+          "isRequired": true,
+          "regex": "/(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{9,}/",
+          "error": "Password must be 9 characters long and must contain a lowercase, uppercase and a digit."
+        }
+      }
+    ],
+    "userPrivacyForm": [
+      {
+        "checked": false,
+        "label": "Recieve updates about Tray.io products by email",
+        "id": "productUpdate",
+        "name": "productUpdate",
+        "type": "checkbox"
+      },
+      {
+        "checked": false,
+        "label": "Recieve communication about by email for other products created by Tray.io team",
+        "id": "otherProductUpdate",
+        "name": "otherProductUpdate",
+        "type": "checkbox"
+      }
+    ],
+    "userFormValidation": {
+      "name": {
+        "validator": {
+          "isRequired": true,
+          "error": "Name is required."
+        }
+      },
+      "email": {
+        "validator": {
+          "isRequired": true,
+          "regex": "\\S+@\\S+\\.\\S+",
+          "error": "A valid email address is required."
+        }
+      },
+      "password": {
+        "validator": {
+          "isRequired": true,
+          "regex": "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d@$!%*?&]{10,}$/g",
+          "error": "Password must be 9 characters long and must contain a lowercase, uppercase and a digit."
+        }
+      }
+    }
+  },
+  "usersProfile": [
+    {
+      "userid": "ee7ac090-a040-4d5e-9d56-e070aec50aa9",
+      "name": "zfsdfgsdfa",
+      "role": "",
+      "email": "info@gulpdigital.com",
+      "password": "!9gdT35t",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 1
+    },
+    {
+      "userid": "56ec72a3-2f52-449d-af10-dde391b30d24",
+      "name": "zfsdfgsdfa",
+      "role": "",
+      "email": "info@gulpdigital.com",
+      "password": "!9gdT35t",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 2
+    },
+    {
+      "userid": "b9d059f5-623f-4d2b-becb-72a5bcb33a17",
+      "name": "zfsdfgsdfa",
+      "role": "",
+      "email": "info@gulpdigital.com",
+      "password": "!9gdT35t",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 3
+    },
+    {
+      "userid": "dd99638e-107a-4be9-b6be-3569c2027c7b",
+      "name": "zfsdfgsdfa",
+      "role": "",
+      "email": "info@gulpdigital.com",
+      "password": "!9gdT35t",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 4
+    },
+    {
+      "userid": "c2b6bed6-c528-4694-afae-87957317f92a",
+      "name": "",
+      "role": "",
+      "email": "",
+      "password": "",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 5
+    },
+    {
+      "userid": "018b6fd2-3499-43da-a202-ab2964c61bee",
+      "name": "",
+      "role": "",
+      "email": "",
+      "password": "",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 6
+    },
+    {
+      "userid": "b66af9a0-dcb9-4868-a3ad-07a4d9c7dde6",
+      "name": "",
+      "role": "",
+      "email": "",
+      "password": "",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 7
+    },
+    {
+      "userid": "e9f80aa1-edc9-42fa-a6c4-c375ec4472a0",
+      "name": "",
+      "role": "",
+      "email": "",
+      "password": "",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 8
+    },
+    {
+      "userid": "af95bb25-d38d-40b8-a631-86ee6660e1cf",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 9
+    },
+    {
+      "userid": "e2baefa6-6dd0-43fa-aa8b-8bbf2fbfccc7",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 10
+    },
+    {
+      "userid": "3e3eff63-e742-4f39-842f-bbbc3843fa55",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 11
+    },
+    {
+      "userid": "f66de7d7-129f-4eaa-912e-0bf3b926ed66",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 12
+    },
+    {
+      "userid": "dfb335a1-1e49-411d-be90-73e4361fdfd3",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 13
+    },
+    {
+      "userid": "b7a35e3a-e1dd-4c10-98f5-b331de76b797",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 14
+    },
+    {
+      "userid": "c63fec99-c58b-4cd6-a10e-8f4dc4f78031",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 15
+    },
+    {
+      "userid": "bb888b7e-f254-48d4-94d2-c4955bece26d",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 16
+    },
+    {
+      "userid": "5fee928a-83d5-4275-ad23-59cc8c3f4222",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 17
+    },
+    {
+      "userid": "67309846-dde1-4e6e-b99a-a3878ba5b587",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 18
+    },
+    {
+      "userid": "1a53bc36-a4bb-4e75-ad24-163805ac7596",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 19
+    },
+    {
+      "userid": "d857ea91-7a40-474a-b6a9-102604c64834",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 20
+    },
+    {
+      "userid": "4c6eb70b-2a82-46f8-84ef-997504f8a322",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 21
+    },
+    {
+      "userid": "5ee5d8e5-9cb4-43eb-bd9a-95161dc348bb",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 22
+    },
+    {
+      "userid": "697664c9-137b-4848-bdcc-ac7c713e82b3",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 23
+    },
+    {
+      "userid": "ebbe6913-c660-4b36-8191-e98d53d6806c",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 24
+    },
+    {
+      "userid": "0614e7e2-c565-47e5-8155-e78f55bbb035",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35tsdf",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 25
+    },
+    {
+      "userid": "38c8fcfb-af15-4484-90a3-5f6eb0a7b1ff",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 26
+    },
+    {
+      "userid": "9cdd1a2c-15e6-43c7-bf0f-9a6ae6526ecf",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 27
+    },
+    {
+      "userid": "749cc976-904a-43be-9b67-411174111478",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 28
+    },
+    {
+      "userid": "35ad79e6-68dc-4291-820f-550beea883e9",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 29
+    },
+    {
+      "userid": "d77a382f-ffbd-44b7-8f29-f8d6b3ab72f1",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 30
+    },
+    {
+      "userid": "e0fbaa08-67ab-4412-8fbc-c98647c79961",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 31
+    },
+    {
+      "userid": "c533c4bf-9070-43d3-9061-09c99c529a7a",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 32
+    },
+    {
+      "userid": "95525f50-35b1-4f9d-85c0-6f88362cdf06",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 33
+    },
+    {
+      "userid": "e75485c6-f0f4-4c87-9918-63cf07f5337e",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 34
+    },
+    {
+      "userid": "98f0c297-b042-40dc-81db-aff43fbdf2ba",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 35
+    },
+    {
+      "userid": "f1bd3c12-11f2-45fa-b2b4-deaa73d58111",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 36
+    },
+    {
+      "userid": "aaee2354-2115-4c99-940f-76beea30dda9",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 37
+    },
+    {
+      "userid": "da22fb00-f27a-44f0-bf62-527b604cc698",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 38
+    },
+    {
+      "userid": "0b1f63d8-696f-49b8-befb-bc9778fb3f27",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 39
+    },
+    {
+      "userid": "3f43a7f8-e096-4bc2-a030-1a16ecfe8790",
+      "name": "",
+      "role": "",
+      "password": "!9gdT35txcbvxc",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 40
+    },
+    {
+      "userid": "e9f7a957-cc9c-4cf5-ad3d-54422b4b9d43",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35txfggbh2",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 41
+    },
+    {
+      "userid": "99a5f747-b66d-4324-b4c7-74491af3b23a",
+      "name": "",
+      "role": "",
+      "password": "",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 42
+    },
+    {
+      "userid": "65aeab68-77ef-4578-852e-2ff849b416dc",
+      "name": "",
+      "role": "",
+      "password": "",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 43
+    },
+    {
+      "userid": "7f4789f0-ad3b-45ba-8a04-f185b0a212a2",
+      "name": "",
+      "role": "",
+      "password": "",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 44
+    },
+    {
+      "userid": "5922e456-e8b6-49fd-a183-be8ce183dd0c",
+      "name": "francis",
+      "role": "Developer",
+      "password": "Francisbolaji1",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 45
+    },
+    {
+      "userid": "62bf98ce-7b2e-416a-9155-2196d3a1d208",
+      "name": "francis",
+      "role": "",
+      "password": "Dooooooooof1",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 46
+    },
+    {
+      "userid": "1471eb7f-dac2-43ff-b864-d876ebb5818b",
+      "name": "Bolajihause",
+      "role": "Interior Designer",
+      "password": "!9gdT35tjkkjkj",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 47
+    },
+    {
+      "userid": "490edf82-7a68-4d51-a0c9-26cb8c2f3c20",
+      "name": "Bolajihause",
+      "role": "Interior Designer",
+      "password": "!9gdT35tjkkjkj",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 48
+    },
+    {
+      "userid": "6a9c06ef-74c0-42f9-b41b-55c7aeaee021",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 49
+    },
+    {
+      "userid": "07323fe9-0138-4442-8ad2-3acb0b659f3a",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 50
+    },
+    {
+      "userid": "f7856210-8eaa-4250-8847-ff8165c85259",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 51
+    },
+    {
+      "userid": "afe98a09-3488-4443-b0e7-f4bae19f7350",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 52
+    },
+    {
+      "userid": "2a06ebb3-259d-46cc-a3eb-804ee4cbcdab",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 53
+    },
+    {
+      "userid": "8e4e3af6-e5f8-48a4-ac11-8805bb092652",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 54
+    },
+    {
+      "userid": "9ac5ed78-8269-4f60-bd92-e4e32686d760",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 55
+    },
+    {
+      "userid": "68cb6ff6-3acc-4e59-956e-e72ef09992f3",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 56
+    },
+    {
+      "userid": "c3ad1235-4a18-483a-b329-cee2cab153b3",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tlkjlk",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 57
+    }
+  ]
+}
