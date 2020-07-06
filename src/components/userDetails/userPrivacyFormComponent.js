@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { Col, Form, FormGroup, Button } from 'react-bootstrap';
-import FormCheckLabel from 'react-bootstrap/FormCheckLabel';
-import FormCheckInput from 'react-bootstrap/FormCheckInput';
+import _isEmpty from 'lodash/isEmpty';
+import { Col } from 'react-bootstrap';
 import { fetchFormConfigData } from '../../store/actions/user.action';
+import { withLoader } from '../sharedComponents/withLoader';
+import HeaderComponent from '../sharedComponents/header/headerComponent';
+import PrivacyConsentForm from './privacyConsentForm';
+import Notification from '../sharedComponents/notification/notification';
+
+const RenderPrivacyConsentForm = withLoader(PrivacyConsentForm);
 
 export const UserPrivacyFormComponent = () => {
     let history = useHistory();
-    const { userData } = history?.location?.state;
-    const _dispatch = useDispatch();
+    const Dispatch = useDispatch();
     const userPrivacyForm = useSelector(state => state?.user?.formConfigData?.userPrivacyForm);
+    const isApiError = useSelector(state => state?.user?.error);
+    const [isLoading, setIsLoading] = useState(true);
     const [userPrivacyData, setUserPrivacyData] = useState({
         productUpdate: '',
         otherProductUpdate: ''
@@ -19,7 +25,7 @@ export const UserPrivacyFormComponent = () => {
 
     const handleOnChange = (e) => {
         const {name, checked} = e.target;
-  
+
         setUserPrivacyData({
             ...userPrivacyData,
             [name]: checked
@@ -28,6 +34,7 @@ export const UserPrivacyFormComponent = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        const { userData } = history?.location?.state;
         const location = {
             pathname: '/done',
             state: { userData, userPrivacyData }
@@ -37,46 +44,43 @@ export const UserPrivacyFormComponent = () => {
     };
 
     useEffect(() => {
-        _dispatch(fetchFormConfigData());
-    }, [_dispatch]);
+        if (_isEmpty(history?.location?.state)) {
+            history.push('/user');
+        }
+        Dispatch(fetchFormConfigData()).then(() => {
+            setIsLoading(false);
+        });
+    }, [Dispatch]);
 
     return (
-        <Col  md={{ span: 8, offset: 2 }}>
-            <Form name="userPrivacyForm" onSubmit={handleFormSubmit}>
-                {userPrivacyForm?.map(inputField => 
-                    <FormGroup key={inputField.id}>
-                        <FormCheckInput 
-                            type={inputField.type} 
-                            name={inputField.name} 
-                            id={inputField.id}
-                            onChange={handleOnChange}
-                        />
-                        <FormCheckLabel htmlFor={inputField.name}>{inputField.label}</FormCheckLabel>
-                    </FormGroup>
-                    )}
-                
-               
-                <FormGroup>
-                    <Button variant="secondary" type="button" onClick={() => history.push('/user')}>Back</Button>
-                    <Button type="submit">Submit</Button>
-                </FormGroup> 
-            </Form>
+        <Col sm={{ span: 6, offset: 3 }}>
+            <HeaderComponent title="Privacy consent" />
+            {!_isEmpty(isApiError)
+                ? (<Notification type="error" message="Oops! Something went wrong.. <a href='/user'>start again</a>" />)
+                : (<RenderPrivacyConsentForm
+                    loading={isLoading}
+                    userPrivacyForm={userPrivacyForm}
+                    handleFormSubmit={handleFormSubmit}
+                    handleOnChange={handleOnChange}
+                />)
+            }
+
         </Col>
     )
 };
 
 UserPrivacyFormComponent.defaultProps = {
+    title: '',
     productUpdate: '',
     otherProductUpdate: '',
     history: {},
-    fetchFormConfigData: () => {},
 };
 
 UserPrivacyFormComponent.propTypes = {
+    title: PropTypes.string,
     productUpdate: PropTypes.string,
     otherProductUpdate: PropTypes.string,
     history: PropTypes.object.isRequired,
-    fetchFormConfigData: PropTypes.func.isRequired,
 };
 
 export default UserPrivacyFormComponent;

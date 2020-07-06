@@ -1,10 +1,13 @@
+## Create User App 
+A simple app to collect user details by filling a form.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -27,42 +30,35 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technical Requirement
+SOLID and KISS design patterns are used as a strategy to achieve the purpose of code to be easily extended, 
+modified, tested, and refactored without any problems.
+ 
+The application consist of 3 pages and each page must be completed and the steps at the top of the pages will indicate 
+the progress stages of the application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. the first page has a form to collect user name, role, email and password.
+    - there is a form validation to ensure that all required fields are filled with user inputs.
+    - if form is not valid, it will not proceed to the next step/page.
+2. the second page is to choose or consent and signup to product marketing notifications. 
+    - Thare two checkboxes to tickand they are not mandatory.
+    - no input validation on these input fields.
+    - at this stage, the user details of both pages should be ready to be created under user profile.
+3. the last page will which is the done, this should make an api post request and send the user details object to 
+    the services/db.
+    - a confirmation message should be displayed on the screen.
+    
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Redux, thunk, axios, and using React Hooks api (functional component) approach.
+the project is structured for clarity by spliting codes into component, shared component, store/api and though the structing
+can be improved. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Unit test written for the components, redux action etc. 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Todo:
+It's obvious that an improvement is required  for business to be eable to extend the capability of the App. 
+- The routes object can be path of the app configuration and load dynamically and can also be extended or reduced.
+- The app is designed to allow more pages to be added as new modules/components.
+- Sass or style component can be adopted for ease of maintenance and theme improvement.
+- More Unit test coverage for key components need applying. 

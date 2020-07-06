@@ -44,67 +44,29 @@ export const createUser = (userFormData) => {
 	} = userFormData;
 
 	return (dispatch) => {
-		dispatch(loading());
-	  return axios.post(`${apiEndpoint}/usersProfile`, {
-	  	userid,
-		name,
-		role,
-		email,
-		password,
-		productUpdate, 
-		otherProductUpdate,
-		completed
-	}).then(res => {
-		  dispatch({
-			  type: CREATE_USER_DETAILS,
-			  payload: res.data
-		  });
+		dispatch(loading(true));
 
-	  }).catch(error => {
-	  	dispatch({
-			type: ERROR,
-			payload: error
+		return axios.post(`${apiEndpoint}/usersProfile`, {
+			userid,
+			name,
+			role,
+			email,
+			password,
+			productUpdate,
+			otherProductUpdate,
+			completed
+		}).then(res => {
+			  dispatch({
+				  type: CREATE_USER_DETAILS,
+				  payload: res.data
+			  });
+			  dispatch(loading(false));
+
+		}).catch(error => {
+			dispatch({
+				type: ERROR,
+				payload: error
+			});
 		});
-	  });
 	}
 };
-
-// export const getReports = () => {
-// 	return (dispatch) => {
-// 		dispatch(loading());
-// 		return axios.get(`${apiEndpoint}/reports/`)
-// 			.then(res => {
-// 				dispatch({
-// 					type: GET_REPORT_LISTS,
-// 					payload: res.data
-// 				});
-
-// 			})
-// 			.catch(error => {
-// 				dispatch({
-// 					type: ERROR,
-// 					payload: error
-// 				});
-// 			});
-// 	}
-// }
-
-// export const getReport = (id) => {
-// 	return (dispatch) => {
-// 		dispatch(loading());
-// 		return axios.get(`${apiEndpoint}/reports/${id}`)
-// 			.then(res => {
-// 			dispatch({
-// 				type: GET_A_REPORT,
-// 				payload: res.data
-// 			});
-// 		})
-// 		.catch(error => {
-// 			console.log(error);
-// 			dispatch({
-// 				type: ERROR,
-// 				payload: error
-// 			});
-// 		});
-// 	}
-// }

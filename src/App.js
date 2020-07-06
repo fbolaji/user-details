@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, useHistory, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch, useHistory } from 'react-router-dom';
+
 import './App.css';
 import { Container, Col, Row } from 'react-bootstrap';
 import StepsComponent from './components/sharedComponents/stepsComponent';
@@ -16,17 +17,23 @@ function App() {
     <div className="userDetailsApp">
     <Container fluid>
       <Row>
-        <Col  md={{ span: 8, offset: 2 }} className="center">
-          <h3>Create User Details</h3>
-        </Col>
+        {/*<Col  md={{ span: 8, offset: 2 }} className="center">*/}
+        {/*  <h3>Create User Details</h3>*/}
+        {/*</Col>*/}
         <Col md={{ span: 8, offset: 2 }}>
-          <StepsComponent currentStep={currentLocation} /> 
+          <StepsComponent
+              stepsList={[
+                {stepIndex: 0, cssClass: 'inactive', page: 'user'},
+                {stepIndex: 1, cssClass: 'inactive', page: 'privacy'},
+                {stepIndex: 2, cssClass: 'inactive', page: 'done'}
+            ]}
+              currentStep={currentLocation} />
         </Col>
       </Row>
       <Row>
         <Switch>
             <Route exact path="/">
-                <UserDetailsComponent />
+                <Redirect to="/user" />
             </Route>
             <Route exact path="/user">
               <UserDetailsComponent />

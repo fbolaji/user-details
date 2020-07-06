@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 export const UserDetailsFormComponent = ({
     handleOnChange,
     handleFormSubmit,
-    inputFields
+    inputFields,
 }) => {
 
     const { register, errors, handleSubmit } = useForm();
@@ -80,9 +80,9 @@ export const UserDetailsFormComponent = ({
    
     return (
         <>
-         <form onSubmit={handleSubmit(onSubmit)}>
+         <form onSubmit={handleSubmit(onSubmit)} data-testid="userDetail_testid">
              {renderInputFields()}
-            <FormGroup><Button type="submit">Submit</Button></FormGroup>
+            <div className="pt-4"><Button className="float-right" type="submit">Submit</Button></div>
          </form>
         </>
     )
@@ -90,14 +90,10 @@ export const UserDetailsFormComponent = ({
 
 UserDetailsFormComponent.defaultProps = {
     inputFields: [],
-    handleOnChange: () => {},
-    handleFormSubmit: () => {},
 }
 
 UserDetailsFormComponent.propTypes = {
     inputFields: PropTypes.array.isRequired,
-    handleOnChange: PropTypes.func.isRequired,
-    handleFormSubmit: PropTypes.func.isRequired,
 }
 
 export default UserDetailsFormComponent;

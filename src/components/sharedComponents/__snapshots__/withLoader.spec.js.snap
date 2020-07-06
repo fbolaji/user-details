@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withLoader should take component with props and if loading is true show spinnng icon while loading 1`] = `
+<div>
+  <div
+    class="loader-overlay"
+    data-testid="test-loader"
+  >
+    <div
+      class="loader-circle-wrap"
+    >
+      <div
+        class="loader-circle"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`withLoader should take component with props and if loading is true, show spinnng icon while loading 1`] = `
+<div>
+  <div
+    class="loader-overlay"
+    data-testid="test-loader"
+  >
+    <div
+      class="loader-circle-wrap"
+    >
+      <div
+        class="loader-circle"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`withLoader should take component with props and show spinnng while loading 1`] = `
+<div>
+  <div
+    class="loader-overlay"
+    data-testid="test-loader"
+  >
+    <div
+      class="loader-circle-wrap"
+    >
+      <div
+        class="loader-circle"
+      />
+    </div>
+  </div>
+</div>
+`;

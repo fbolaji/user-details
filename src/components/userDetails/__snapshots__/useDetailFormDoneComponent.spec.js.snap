@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetailsFormDoneComponent should render confirmation message and matchSnapshot 1`] = `
+<div>
+  <div
+    class="col-md-8 offset-md-2"
+  >
+    <p
+      class="primary"
+    >
+      Please verify your email address, you should have received an email from us already!
+    </p>
+  </div>
+</div>
+`;

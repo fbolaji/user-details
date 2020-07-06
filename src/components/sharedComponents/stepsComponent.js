@@ -1,39 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const stepsList=[
-    {stepIndex: 1, cssClass: 'inactive', page: 'user'}, 
-    {stepIndex: 2, cssClass: 'inactive', page: 'privacy'}, 
-    {stepIndex: 3, cssClass: 'inactive', page: 'done'}
-];
-
-export const StepsComponent = ({currentStep="user"}) => {
-    console.log(currentStep);
+export const StepsComponent = ({ stepsList, currentStep="user"}) => {
     const [currentLoc, setCurrentLoc] = useState(currentStep);
-   
 
     const setPrevStep = () => {
-        const currentIdx = stepsList.find(s => s.page === currentStep ? s.stepIndex : 0);
+        const currentIdx = stepsList.find(s => s.page === currentStep);
         const stepsElements = [...document.querySelectorAll('.steps li')];
-        let curr = 1;
+        const filterList = stepsElements.filter((item, index) => index < currentIdx.stepIndex ? item : '');
 
-        stepsElements.forEach(el => {
-            if (currentIdx.stepIndex - curr) {
-                el.classList.add('completed');
-            } 
-           
+        filterList.forEach((el, index) => {
+            el.classList.add('completed');
         });
     };
 
     useEffect(() => {
-        if (currentStep) {
-            setCurrentLoc(currentStep);
-            setPrevStep();
-        }
-    }, [currentStep, setPrevStep]);
+        setCurrentLoc(currentStep);
+    }, [currentStep]);
+
+    useEffect(() => {
+        setPrevStep();
+    })
 
     return (
-        <div className="steps-container">
+        <div data-testid="test-steps" className="steps-container">
             <ul className="steps">
                 {stepsList.map((step, index) => 
                 <li 

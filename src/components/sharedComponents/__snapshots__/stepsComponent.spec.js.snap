@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepComponet Should render and match snapshot 1`] = `
+<div>
+  <div
+    class="steps-container"
+    data-testid="test-steps"
+  >
+    <ul
+      class="steps"
+    >
+      <li
+        class="is-active"
+      >
+        user
+      </li>
+      <li
+        class="inactive"
+      >
+        privacy
+      </li>
+      <li
+        class="inactive"
+      >
+        done
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`StepComponet Should render list of steps 1`] = `
+<div>
+  <div
+    class="steps-container"
+    data-testid="test-steps"
+  >
+    <ul
+      class="steps"
+    >
+      <li
+        class="is-active"
+      >
+        user
+      </li>
+      <li
+        class="inactive"
+      >
+        privacy
+      </li>
+      <li
+        class="inactive"
+      >
+        done
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`StepComponet Should render steps list 1`] = `
+<div>
+  <div
+    class="steps-container"
+    data-testid="test-steps"
+  >
+    <ul
+      class="steps"
+    >
+      <li
+        class="is-active"
+      >
+        user
+      </li>
+      <li
+        class="inactive"
+      >
+        privacy
+      </li>
+      <li
+        class="inactive"
+      >
+        done
+      </li>
+    </ul>
+  </div>
+</div>
+`;
