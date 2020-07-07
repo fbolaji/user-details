@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import _isEmpty from 'lodash/isEmpty';
 import { Col } from 'react-bootstrap';
-import { fetchFormConfigData } from '../../store/actions/user.action';
-import { withLoader } from '../sharedComponents/withLoader';
-import HeaderComponent from '../sharedComponents/header/headerComponent';
+import { fetchFormConfigData } from '../../../store/actions/user.action';
+import { withLoader } from '../../HOC/withLoader';
+import HeaderComponent from '../../sharedComponents/header/headerComponent';
 import PrivacyConsentForm from './privacyConsentForm';
-import Notification from '../sharedComponents/notification/notification';
+import Notification from '../../sharedComponents/notification/notification';
 
 const RenderPrivacyConsentForm = withLoader(PrivacyConsentForm);
 

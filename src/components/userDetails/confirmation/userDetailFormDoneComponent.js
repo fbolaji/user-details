@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import _isEmpty from 'lodash/isEmpty';
 import { Col } from 'react-bootstrap';
-import { createUser } from '../../store/actions/user.action';
-import { withLoader } from '../sharedComponents/withLoader';
-import HeaderComponent from './../sharedComponents/header/headerComponent';
-import Notification from '../sharedComponents/notification/notification';
+import { createUser } from '../../../store/actions/user.action';
+import { withLoader } from '../../HOC/withLoader';
+import HeaderComponent from '../../sharedComponents/header/headerComponent';
+import Notification from '../../sharedComponents/notification/notification';
 
 const ConfirmationMessage = withLoader(() =>
         <p className="confirmation-text">
@@ -19,7 +19,7 @@ const ConfirmationMessage = withLoader(() =>
 export const UserDetailsFormDoneComponent = () => {
     let history = useHistory();
     const Dispatch = useDispatch();
-    const isApiError = useSelector(state => state.user.error);
+    const isApiError = useSelector(state => state?.user?.error);
     const [isLoading, setIsLoading] = useState(false);
     // state destructing commented out because unit test is failing..
     //const {userData, userPrivacyData} = history?.location?.state;

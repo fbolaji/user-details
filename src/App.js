@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Redirect, Switch, useHistory } from 're
 import './App.css';
 import { Container, Col, Row } from 'react-bootstrap';
 import StepsComponent from './components/sharedComponents/steps/stepsComponent';
-import UserDetailsComponent from './components/userDetails/userDetailsComponent';
-import UserPrivacyFormComponent from './components/userDetails/userPrivacyFormComponent';
-import UserDetailsFormDoneComponent from './components/userDetails/userDetailFormDoneComponent';
+import UserDetailsComponent from './components/userDetails/userDetailsForm/userDetailsComponent';
+import UserPrivacyFormComponent from './components/userDetails/privacy/userPrivacyFormComponent';
+import UserDetailsFormDoneComponent from './components/userDetails/confirmation/userDetailFormDoneComponent';
 
 function App() {
   const {pathname} = useHistory() || window?.location;

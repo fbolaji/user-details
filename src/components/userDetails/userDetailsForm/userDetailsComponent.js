@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from '../../../store/react-redux-hooks';
 import { useHistory } from 'react-router-dom';
 import _isEmpty from 'lodash/isEmpty';
-import { withLoader } from '../sharedComponents/withLoader';
+import { withLoader } from '../../HOC/withLoader';
 import { Col } from 'react-bootstrap';
-import HeaderComponent from '../sharedComponents/header/headerComponent';
+import HeaderComponent from '../../sharedComponents/header/headerComponent';
 import UserDetailsFormComponent from './userDetailsFormComponent';
-import Notification from '../sharedComponents/notification/notification';
-import { fetchFormConfigData } from '../../store/actions/user.action';
+import Notification from '../../sharedComponents/notification/notification';
+import { fetchFormConfigData } from '../../../store/actions/user.action';
 
 const RenderUserDetailsForm = withLoader(UserDetailsFormComponent);
 
 export const UserDetailsContainer = (props) => {
     let history = useHistory();
-	const Dispatch = useDispatch();
+	const dispatch = useDispatch();
     const formConfigData = useSelector(state => state?.user?.formConfigData);
     const isApiError = useSelector(state => state?.user?.error);
     const [userData, setUserData] = useState({
@@ -46,12 +46,12 @@ export const UserDetailsContainer = (props) => {
         history.push(location); 
     }
 
-    useEffect(() => {
+    React.useEffect(() => {
         setIsLoading(true);
-		Dispatch(fetchFormConfigData()).then(() => {
+		dispatch(fetchFormConfigData()).then(() => {
             setIsLoading(false);
         });
-	}, [Dispatch]);
+	}, [dispatch]);
 
     return (
         <Col  md={{ span: 6, offset: 3 }}>

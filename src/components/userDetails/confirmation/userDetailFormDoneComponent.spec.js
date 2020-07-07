@@ -3,9 +3,9 @@ import * as rr from 'react-redux';
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import { render, fireEvent } from '@testing-library/react';
 import UserDetailFormDoneComponent from './userDetailFormDoneComponent';
-import { createUser } from '../../store/actions/user.action';
+import { createUser } from '../../../store/actions/user.action';
 
-import rootReducer from '../../store/reducers';
+import rootReducer from '../../../store/reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 

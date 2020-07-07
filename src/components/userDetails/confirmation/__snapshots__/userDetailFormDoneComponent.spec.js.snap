@@ -3,10 +3,15 @@
 exports[`UserDetailsFormDoneComponent should render confirmation message and matchSnapshot 1`] = `
 <div>
   <div
-    class="col-md-8 offset-md-2"
+    class="col-md-6 offset-md-3"
   >
+    <header>
+      <h2>
+        User details completed.
+      </h2>
+    </header>
     <p
-      class="primary"
+      class="confirmation-text"
     >
       Please verify your email address, you should have received an email from us already!
     </p>
