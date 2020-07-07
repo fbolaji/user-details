@@ -50,7 +50,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `yarn dev` 
-or if starting the app and json-server separately then type `yarn start' and `yarn json-server` in 
+or if starting the app and json-server separately then type `yarn start and yarn json-server'  in 
 the terminal console.
 
 Runs the app in the development mode.<br />
