@@ -1,18 +1,42 @@
+![user-details](src/screenshot.png)
 ## Create User App 
-A simple app to collect user details by filling a form in three steps.
+This is a simple web-app to collect user details by filling a form in three steps.
 
 ## Technical Note:
-Redux, Thunk, cocurrently, json-server, axios, useForm, react-bootstrap and react-router-dom.
-React Hooks api (functional component) is used to simplify the project, and it was structured for 
-clarity by code splitting into component, shared component, store/api and though the structure can be improved 
+### Used: 
+ * Yarn
+ * Create react-app
+ * Redux, 
+ * Thunk, 
+ * cocurrently, j
+ * json-server, 
+ * axios, 
+ * useForm, 
+ * react-bootstrap and 
+ * react-router-dom.
+ 
+ *For tests:*
+ * jest,
+ * enzyme,
+ * redux-mock-store
+ * fetchmock,
+ * test-library
+ 
+React Hooks api (functional component) is used to simplify the project, and it was structured for clarity by code splitting into component, shared component, store/api and though the structure can be improved 
 and tidy up. 
  
-The application consist of 3 pages and each page must be completed and the steps at the top of the pages will indicate 
+The `application` consist of 3 pages and each page must be completed and the steps at the top of the pages will indicate 
 the progress stages of the application.
 
-1. the first page has a form to collect user name, role, email and password.
-    - there is a form validation to ensure that all required fields are filled with user inputs.
-    - if form is not valid, it will not proceed to the next step/page.
+1. the first page has a form to collect 
+   * user 
+   * name, 
+   * role, 
+   * email
+   * password.
+  - There is a form validation to ensure that all required fields are filled with user inputs.
+  - if form is not valid, it will not proceed to the next step/page.
+ 
 2. the second page is to choose or consent and signup to product marketing notifications. 
     - Thare two checkboxes to tickand they are not mandatory.
     - no input validation on these input fields.
@@ -50,7 +74,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `yarn dev` 
-or if starting the app and json-server separately then type `yarn start' and `yarn json-server` in 
+or if starting the app and json-server separately then type `yarn start and yarn json-server'  in 
 the terminal console.
 
 Runs the app in the development mode.<br />
