@@ -1,4 +1,6 @@
-![user-details](src/screenshot.png)
+![user-details](src/screenshot-1.png)
+![user-details](src/screenshot-2.png)
+![user-details](src/screenshot-3.png)
 ## Create User App 
 This is a simple web-app to collect user details by filling a form in three steps.
 
