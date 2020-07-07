@@ -10,7 +10,7 @@ This is a simple web-app to collect user details by filling a form in three step
  * Create react-app
  * Redux, 
  * Thunk, 
- * cocurrently, j
+ * concurrently,
  * json-server, 
  * axios, 
  * useForm, 
