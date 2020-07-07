@@ -54,7 +54,7 @@ export const UserDetailsContainer = (props) => {
 	}, [Dispatch]);
 
     return (
-        <Col  sm={{ span: 6, offset: 3 }}>
+        <Col  md={{ span: 6, offset: 3 }}>
             <HeaderComponent title="Create User details" />
             {!_isEmpty(isApiError)
                 ? (<Notification type="error" message="Oops! Something went wrong, please refresh your browser" />)

@@ -15,6 +15,7 @@ const ConfirmationMessage = withLoader(() =>
             received an email from us already!
         </p>
     );
+
 export const UserDetailsFormDoneComponent = () => {
     let history = useHistory();
     const Dispatch = useDispatch();
@@ -32,12 +33,6 @@ export const UserDetailsFormDoneComponent = () => {
 
     const postUserDetails = () => {
         setIsLoading(true);
-
-        if (_isEmpty(history?.location?.state?.userData)) {
-            history.push('/user');
-            return;
-        }
-
         Dispatch(createUser(_mergeData)).then(() => {
             const el = document.querySelector('.is-active');
             // user details
@@ -52,8 +47,12 @@ export const UserDetailsFormDoneComponent = () => {
     };
 
     useEffect(() => {
+        if (_isEmpty(history?.location?.state?.userData)) {
+            history.push('/user');
+            return;
+        }
         postUserDetails();
-    }, []);
+    }, [history]);
 
 
     return (

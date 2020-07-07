@@ -50,10 +50,10 @@ export const UserPrivacyFormComponent = () => {
         Dispatch(fetchFormConfigData()).then(() => {
             setIsLoading(false);
         });
-    }, [Dispatch]);
+    }, [Dispatch, history]);
 
     return (
-        <Col sm={{ span: 6, offset: 3 }}>
+        <Col md={{ span: 6, offset: 3 }}>
             <HeaderComponent title="Privacy consent" />
             {!_isEmpty(isApiError)
                 ? (<Notification type="error" message="Oops! Something went wrong.. <a href='/user'>start again</a>" />)
