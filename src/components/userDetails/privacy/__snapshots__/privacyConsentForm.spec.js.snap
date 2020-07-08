@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrivacyConsentForm should render form elements if data is > 0 1`] = `
+<div>
+  <form
+    class=""
+    data-testid="userPrivacyForm_testid"
+    name="userPrivacyForm"
+  >
+    <div
+      class="form-check"
+    >
+      <input
+        class="form-check-input"
+        id="productUpdate"
+        name="productUpdate"
+        type="checkbox"
+      />
+      <label
+        class="form-check-label"
+        for="productUpdate"
+      >
+        Recieve updates about Tray.io products by email
+      </label>
+    </div>
+    <div
+      class="form-check"
+    >
+      <input
+        class="form-check-input"
+        id="otherProductUpdate"
+        name="otherProductUpdate"
+        type="checkbox"
+      />
+      <label
+        class="form-check-label"
+        for="otherProductUpdate"
+      >
+        Recieve communication about by email for other products created by Tray.io team
+      </label>
+    </div>
+    <div
+      class="pt-4"
+    >
+      <button
+        class="btn btn-secondary"
+        type="button"
+      >
+        Back
+      </button>
+      <button
+        class="float-right btn btn-primary"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+`;

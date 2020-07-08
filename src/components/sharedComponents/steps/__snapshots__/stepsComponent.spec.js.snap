@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`StepComponent Should render and match snapshot 1`] = `
+<div>
+  <div
+    class="steps-container"
+    data-testid="test-steps"
+  >
+    <ul
+      class="steps"
+    >
+      <li
+        class="is-active completed"
+      >
+        user
+      </li>
+      <li
+        class="inactive"
+      >
+        privacy
+      </li>
+      <li
+        class="inactive"
+      >
+        done
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`StepComponet Should render and match snapshot 1`] = `
 <div>
   <div

@@ -7,9 +7,9 @@ const mockStepsList=[
 	{stepIndex: 2, cssClass: 'inactive', page: 'privacy'},
 	{stepIndex: 3, cssClass: 'inactive', page: 'done'}
 ];
-const renderedHTML = `<ul class="steps"><li class="is-active">user</li><li class="inactive">privacy</li><li class="inactive">done</li></ul>`;
+const renderedHTML = `<div data-testid="test-steps" class="steps-container"><ul class="steps"><li class="is-active completed">user</li><li class="inactive">privacy</li><li class="inactive">done</li></ul></div>`;
 
-describe('StepComponet', () => {
+describe('StepComponent', () => {
 	afterEach(cleanup);
 
 	it('Should render and match snapshot', () => {

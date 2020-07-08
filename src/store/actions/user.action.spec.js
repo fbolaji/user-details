@@ -13,7 +13,7 @@ describe('user.actions', () => {
 	const formConfigData = {
 		"userForm": [
 			{
-				"label": "name",
+				"label": "Name *",
 				"id": "name",
 				"name": "name",
 				"type": "text",
@@ -34,7 +34,7 @@ describe('user.actions', () => {
 				"pattern": ""
 			},
 			{
-				"label": "Email",
+				"label": "Email *",
 				"id": "emailAddress",
 				"name": "emailAddress",
 				"type": "text",
@@ -48,7 +48,7 @@ describe('user.actions', () => {
 				}
 			},
 			{
-				"label": "Password",
+				"label": "Password *",
 				"id": "password",
 				"name": "password",
 				"type": "password",
@@ -133,6 +133,7 @@ describe('user.actions', () => {
 			headers: { 'content-type': 'application/json' }
 		})
 		const idNum = uuid();
+		// id: change id to reflect db indexing
 		const expectedActions = { type: types.CREATE_USER_DETAILS, payload: {
 				"userid": "ee7ac090-a040-4d5e-9d56-e070aec50aa9",
 				"name": "zfsdfgsdfa",
@@ -142,7 +143,7 @@ describe('user.actions', () => {
 				"productUpdate": true,
 				"otherProductUpdate": true,
 				"completed": true,
-				"id": 75
+				"id": 19
 			}};
 
 		const store = mockStore({ createUserDetails: {}})
@@ -155,7 +156,7 @@ describe('user.actions', () => {
 			"productUpdate": true,
 			"otherProductUpdate": true,
 			"completed": true,
-			"id": 75
+			"id": 19
 		})).then(() => {
 			// return of async actions
 			expect(store.getActions()[1]).toEqual(expectedActions);

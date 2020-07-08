@@ -9,7 +9,7 @@ export  const PrivacyConsentForm = ({ userPrivacyForm, handleOnChange, handleFor
 	let history = useHistory();
 	return (
 		<>
-		<Form name="userPrivacyForm" onSubmit={handleFormSubmit}>
+		<Form data-testid="userPrivacyForm_testid" name="userPrivacyForm" onSubmit={handleFormSubmit}>
 			{userPrivacyForm?.map(inputField =>
 				<FormCheck key={inputField.id}>
 					<FormCheckInput
