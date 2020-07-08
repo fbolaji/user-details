@@ -17,9 +17,6 @@ function App() {
     <div className="userDetailsApp">
     <Container fluid>
       <Row>
-        {/*<Col  md={{ span: 8, offset: 2 }} className="center">*/}
-        {/*  <h3>Create User Details</h3>*/}
-        {/*</Col>*/}
         <Col md={{ span: 8, offset: 2 }}>
           <StepsComponent
               stepsList={[
