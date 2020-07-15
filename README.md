@@ -40,19 +40,19 @@ the progress stages of the application.
   - if form is not valid, it will not proceed to the next step/page.
  
 2. the second page is to choose or consent and signup to product marketing notifications. 
-    - Thare two checkboxes to tickand they are not mandatory.
+    - There are two checkboxes to select but not mandatory.
     - no input validation on these input fields.
-    - at this stage, the user details of both pages should be ready to be created under user profile.
+    - at this stage, the user details collected so far on both pages should be ready to be created under user profile.
 3. the last page will which is the done, this should make an api post request and send the user details object to 
-    the services/db.
+    the services/db using endpoint CreateUserDetails.
     - a confirmation message should be displayed on the screen.
     
 4. If there is an api request error, an error handling is designed to capture it. 
 
-5. Back button is implemented to navigate back to the first screen use useHistory hooks.
+5. Back button is implemented to navigate back to the first screen using useHistory hooks.
 
     
-Unit test written for the components, redux action etc. but need further tweaks to resolve failing test.
+Unit test written for the components, redux action etc. but can do more test.
 
 
 SOLID and KISS design patterns are used as a strategy to achieve the purpose of code to be easily extended, 
