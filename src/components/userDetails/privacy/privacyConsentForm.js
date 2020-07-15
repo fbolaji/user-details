@@ -39,4 +39,4 @@ PrivacyConsentForm.propTypes = {
 	userPrivacyForm: PropTypes.array.isRequired,
 }
 
-export default PrivacyConsentForm;
+export default React.memo(PrivacyConsentForm);

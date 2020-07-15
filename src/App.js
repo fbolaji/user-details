@@ -29,18 +29,23 @@ function App() {
       </Row>
       <Row>
         <Switch>
-            <Route exact path="/">
-                <Redirect to="/user" />
-            </Route>
-            <Route exact path="/user">
-              <UserDetailsComponent />
-            </Route>
-            <Route exact path="/privacy">
-                <UserPrivacyFormComponent />
-            </Route>
-            <Route exact path="/done">
-                <UserDetailsFormDoneComponent />
-            </Route>
+            <Route exact path="/" render={() => <Redirect to="/user" /> } />
+            <Route
+                exact
+                path="/user"
+                render={() => <UserDetailsComponent key="user" />}
+            />
+            <Route
+                exact
+                path="/privacy"
+                render={() => <UserPrivacyFormComponent key="privacy" /> }
+
+            />
+            <Route
+                exact
+                path="/done"
+                render={() => <UserDetailsFormDoneComponent key="done" /> }
+            />
         </Switch>
       </Row>
 

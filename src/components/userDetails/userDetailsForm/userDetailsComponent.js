@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from '../../../store/react-redux-hooks';
 import { useHistory } from 'react-router-dom';
@@ -83,4 +83,4 @@ UserDetailsContainer.propTypes = {
     history: PropTypes.object.isRequired,
 };
 
-export default UserDetailsContainer;
+export default React.memo(UserDetailsContainer);
