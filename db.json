@@ -90,5 +90,16 @@
       }
     }
   },
-  "usersProfile": []
+  "usersProfile": [
+    {
+      "userid": "9a1855bc-016b-4f01-927b-2f5d8e3c8336",
+      "name": "Francis",
+      "role": "",
+      "password": "!9gdT35tsdfdfg",
+      "productUpdate": true,
+      "otherProductUpdate": true,
+      "completed": true,
+      "id": 1
+    }
+  ]
 }
